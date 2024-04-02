@@ -30,7 +30,19 @@ df_filtered = df[(df['species'].isin(species)) & (df['island'].isin(island)) & (
 # Display filtered data
 st.write(df_filtered)
 
-# Visualization (using seaborn and matplotlib)
-fig, ax = plt.subplots()
-sns.histplot(df_filtered['flipper_length_mm'], kde=True, ax=ax)
-st.pyplot(fig)
+
+# Visualization 1: Scatter Plot comparing flipper length and body mass
+fig1, ax1 = plt.subplots()
+sns.scatterplot(data=df_filtered, x='flipper_length_mm', y='body_mass_g', hue='species', style='sex', ax=ax1)
+plt.xlabel('Flipper Length (mm)')
+plt.ylabel('Body Mass (g)')
+plt.title('Flipper Length vs. Body Mass by Species and Sex')
+st.pyplot(fig1)
+
+# Visualization 2: Histogram for bill length
+fig2, ax2 = plt.subplots()
+sns.histplot(df_filtered['bill_length_mm'], kde=True, color='skyblue', ax=ax2)
+plt.xlabel('Bill Length (mm)')
+plt.ylabel('Frequency')
+plt.title('Distribution of Bill Length')
+st.pyplot(fig2)
