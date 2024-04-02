@@ -24,10 +24,10 @@ species = st.sidebar.multiselect('Select Species', options=df['species'].unique(
 island = st.sidebar.multiselect('Select Island', options=df['island'].unique(), default=df['island'].unique())
 sex = st.sidebar.multiselect('Select Sex', options=df['sex'].unique(), default=df['sex'].unique())
 
-# Filtering data based on selection
+
 df_filtered = df[(df['species'].isin(species)) & (df['island'].isin(island)) & (df['sex'].isin(sex))]
 
-# Display filtered data
+
 st.write(df_filtered)
 
 
