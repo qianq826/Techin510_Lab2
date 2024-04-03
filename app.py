@@ -4,14 +4,14 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 st.set_page_config(
-    page_title="Penguins Explorer",
+    page_title="Penguins World",
     page_icon="🐧",
     layout="centered",
     initial_sidebar_state="auto"
 )
 
-st.title("🐧 Penguins Explorer")
-st.write("Welcome to the Penguins Explorer! This app allows you to explore the Palmer Penguins dataset. Use the widgets to filter data and view different visualizations.")
+st.title("🐧 🐧 Penguins World 🐧 🐧")
+st.write("Welcome to Sebastian's Penguins Explorer! This app allows you to explore the Palmer Penguins dataset. Use the widgets to filter data and view different visualizations.")
 
 # Load dataset
 df = pd.read_csv('https://raw.githubusercontent.com/mcnakhaee/palmerpenguins/master/palmerpenguins/data/penguins.csv')
